@@ -1,5 +1,137 @@
+:root{
+    --lilasclaro: #e6e1ef;
+    --lilas: #c6b5d4;
+    --roxo:#90639e;
+    --roxoescuro:#481658;
+    --preto:#000000;
+    --branco: #ffffff;
+
+}
+
 body{
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
+    background-color:var(--roxoescuro);
+    color: #c6b5d4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:3rem;
+}
+H1{
+    padding-top: 2REM;
+}
+.container-body{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.content-add-item{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+#input_new_task,
+#btn_new_task {
+    border: none;
+    font-size: 1rem;
+    outline: none;
+    padding: 1rem;
+}
+
+#input_new_task{
+    width: 20rem;
+    border-radius: 1rem;
+    background-color:var(--branco);
+}
+
+#input_new_task:hover{
+    box-shadow: 0px 0px 11px 0px rgba(255, 255, 255, 0.75);
+    transition: .4S;
+}
+
+#btn_new_task{
+    color: white;
+   size: 10px;
+    background-color: var(--roxo);
+    border-radius: 2.4rem;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+#btn_new_task:hover{
+    background-color: var(--branco);
+    color: var(--roxo);
+    transition: .4S;
+}
+#to_do_list{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5REM;
+    padding: 0; 
+}
+
+#to_do_list li{
+    list-style-type: none;
+    padding: 0.4rem;
+    padding-top: 0.4rem;
+    background-color: rgba(255, 255, 255, 0.37);
+    border-radius: 1rem;
+    font-size:1.8rem;
+    text-transform: capitalize;
+    display: flex;
+    justify-content:space-between;
+}
+
+
+#btn_checkcheio{
+    display: none;
+}
+
+.completed {
+    border-bottom: 2px solid white; /* Borda branca embaixo do texto */
+    color: var(--roxoescuro);
+    text-decoration: line-through; /* Riscar o texto se desejar */
+}
+
+
+
+button {
+    background: none; 
+    border: none; 
+    cursor: pointer; 
+}
+.completed ion-icon{
+    color: var(--roxoescuro); 
+}
+
+ion-icon {
+    font-size: 1.5em;
+    vertical-align: middle; 
+    margin-right: 5px; 
+    padding-top: -1rem;
+    font-size:30px;
+    background-color: transparent;
+    border: none;
+    color: var(--lilas);
+}
+
+/* campo de entrada com sombra vermelha */
+input#input_new_task {
+    border: 1px solid #ccc; 
+    padding: 10px;
+    border-radius: 4px; 
+}
+
+input#input_new_task:focus {
+    outline: none; /* Remove o contorno padrão quando o campo está focado */
+}
+
+/*sombra vermelha quando há um erro */
+input#input_new_task.error {
+    box-shadow: 0 0 10px red; /* Adiciona sombra vermelha */
+    border: 1px solid red; /* Borda vermelha opcional */
 }

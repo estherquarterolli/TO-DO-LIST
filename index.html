@@ -6,22 +6,43 @@
     <title>To Do List</title>
 
     <link rel="stylesheet" href="style.css">
+    
 
 </head>
 <body>
     
-    <h1> To Do List - Quarterolli</h1>
+    <h1 id="TITULOPAG"> To Do List - Quarterolli</h1>
    
     <div class="container-body">
         <div class="content-add-item">
-                <input type="text" name="new_task" id="new_task" placeholder="Digite sua nova task">
-                <button id="btn_new_task"> + </button>
+                <input type="text" name="new_task" id="input_new_task" placeholder="Digite sua nova task">
+                <button  onclick="newTask()" id="btn_new_task" title="CLIQUE AQUI E ADD UMA NOVA TASK!"> 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"/>
+                  </svg> 
+                </button>
         </div>
         <div class="content-body">
+                <ul id="to_do_list"> 
+                        <li><BUTTON id="btn_checkvazio">  
+<ion-icon name="checkmark-circle-outline"></ion-icon>
+<ion-icon id="btn_checkcheio" name="checkmark-circle"></ion-icon>
+                        </BUTTON>lavar roupa
 
+                        <button id="btn_apagartask">
+                            <ion-icon name="trash-bin-outline"></ion-icon>
+
+                        </button></li>
+
+                        <li>Teste</li>
+                        <li>Teste</li>
+                        <li>Teste</li>
+                </ul>
         </div>
     </div>
 
 </body>
 <script src="script.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </html>
